@@ -685,3 +685,33 @@ html{scroll-padding-top:114px}
   .tool{padding:0 10px}
   .tool span{font-size:var(--t-micro)}
 }
+
+/* ==========================================================================
+   404
+   ========================================================================== */
+/* La de GitHub Pages es una página de GitHub: quien erraba la URL de HTG
+   aterrizaba en un sitio que no era HTG. Esta lleva el chrome real y, en vez
+   de disculparse, ofrece los cuatro destinos que existen. */
+.e404{background:var(--night);color:var(--ink)}
+.e404-in{padding-block:clamp(64px,9vw,132px) var(--s-xl);max-width:920px;margin-inline:auto}
+.e404-num{margin:0 0 20px;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:var(--t-micro);font-weight:800;letter-spacing:.28em;color:var(--orange)}
+.e404 h1{margin:0;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-weight:800;text-transform:uppercase;font-size:var(--d1);line-height:.98;
+  letter-spacing:-.012em;color:var(--ink)}
+.e404-lede{margin:22px 0 0;max-width:30em;font-size:var(--t-lede);line-height:1.62;color:var(--ink-2)}
+.e404-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.e404-mapa{list-style:none;margin:var(--s-lg) 0 0;padding:0;display:grid;
+  grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid #1e1e1e}
+.e404-mapa a{display:block;padding:22px 0;border-bottom:1px solid #1e1e1e}
+.e404-mapa li:nth-child(odd) a{padding-right:32px;border-right:1px solid #1e1e1e}
+.e404-mapa li:nth-child(even) a{padding-left:32px}
+.e404-mapa b{display:block;font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:var(--d4);font-weight:700;text-transform:uppercase;letter-spacing:.005em;
+  color:var(--ink);transition:color .25s var(--ease-out)}
+.e404-mapa span{display:block;margin-top:5px;font-size:var(--t-small);color:var(--ink-3)}
+.e404-mapa a:hover b,.e404-mapa a:focus-visible b{color:var(--orange)}
+@media(max-width:700px){
+  .e404-mapa{grid-template-columns:1fr}
+  .e404-mapa li a{padding-inline:0;border-right:0}
+}
