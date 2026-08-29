@@ -715,3 +715,26 @@ html{scroll-padding-top:114px}
   .e404-mapa{grid-template-columns:1fr}
   .e404-mapa li a{padding-inline:0;border-right:0}
 }
+
+/* ==========================================================================
+   MOVIMIENTO
+   ==========================================================================
+   Un solo momento: la llegada de cada acto al scrollear. El estado oculto vive
+   detrás de .mov, que agrega el JS: sin JS la página se ve entera, que es como
+   tiene que fallar.
+   Todo es transición, no animación con fill-mode: una animación puede quedar
+   congelada a mitad de camino y dejar un bloque invisible. Ya pasó.
+   Solo se mueven opacity y transform, así que no hay reflow ni salto de layout.
+   ========================================================================== */
+
+/* Los actos llegan. Se mueve el CONTENIDO, nunca la sección: animar el
+      fondo haría aparecer el negro por encima del crema. */
+.mov [data-rv]{opacity:0;transform:translateY(22px);
+  transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.mov [data-rv].is-in{opacity:1;transform:none}
+/* lo que ya estaba en pantalla al cargar no viaja: aparece y listo */
+.mov [data-rv].is-ya{transition:none}
+
+@media (prefers-reduced-motion:reduce){
+  .mov [data-rv]{opacity:1;transform:none;transition:none}
+}

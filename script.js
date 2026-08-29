@@ -182,3 +182,64 @@ if(siteHeader){
     }
   }
 })();
+
+/* --- movimiento -----------------------------------------------------------
+   Dos momentos: la entrada del hero y la llegada de cada acto al scrollear.
+   La clase .mov la pone el JS, así que si esto no corre la página se ve
+   entera. En la tienda no hay reveals: ahí se busca un repuesto y el
+   movimiento es fricción.                                                   */
+(() => {
+  const quieto = matchMedia('(prefers-reduced-motion:reduce)');
+  const raiz = document.documentElement;
+  raiz.classList.add('mov');
+  if (quieto.matches) return;
+
+  const vh = () => innerHeight || 800;
+
+  /* No hay entrada del hero. La probé y la saqué: arranca recién a los 500ms
+     —la clase .mov la pone este script, que corre después del CSS— y retrasa
+     la lectura del H1, que es el texto más importante del sitio. Un titular
+     que aparece de a poco no explica nada; es decoración que cuesta 400ms.
+     El momento grande va a ser la respuesta del buscador de equipos, donde el
+     movimiento sí enseña algo: qué capa es cuál.                            */
+
+  /* --- 2. los actos llegan ------------------------------------------- */
+  if (document.querySelector('.store-layout')) return;   // la tienda queda quieta
+
+  const secciones = [...document.querySelectorAll('main > section, body > section')].slice(1);
+  const objetivos = [];
+  for (const s of secciones) {
+    // se marca el contenedor de contenido, no la seccion: asi el fondo no parpadea
+    let elegidos = s.classList.contains('wrap')
+      ? [s] : [...s.querySelectorAll(':scope > .wrap, :scope > div > .wrap, :scope > div:not([class])')];
+    if (!elegidos.length) elegidos = [...s.children];
+    for (const el of elegidos) {
+      const c = getComputedStyle(el);
+      if (c.position === 'absolute' || c.position === 'fixed') continue;
+      if (el.tagName === 'IMG' || !el.getBoundingClientRect().height) continue;
+      // nada que ya se mueva solo: el marquee lleva su propia animacion y
+      // marcarlo seria pelearle el transform
+      if (c.animationName !== 'none' || el.querySelector('[class*=marquee]')) continue;
+      el.dataset.rv = '';
+      objetivos.push(el);
+    }
+  }
+
+  // lo que ya se ve al cargar no tiene que viajar: se muestra sin transicion
+  objetivos.forEach(el => {
+    if (el.getBoundingClientRect().top < vh() * 0.9) el.classList.add('is-ya', 'is-in');
+  });
+
+  const io = new IntersectionObserver((filas) => {
+    for (const f of filas) {
+      if (!f.isIntersecting) continue;
+      f.target.classList.add('is-in');
+      io.unobserve(f.target);
+    }
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.02 });
+
+  objetivos.forEach(el => { if (!el.classList.contains('is-in')) io.observe(el); });
+
+  // red de seguridad: si algo quedara sin observar, a los 4s se muestra igual
+  setTimeout(() => objetivos.forEach(el => el.classList.add('is-in')), 4000);
+})();
