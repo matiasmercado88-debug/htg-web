@@ -3,34 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="HTG — Repuestos y accesorios para venta minorista y mayorista.">
-  <title>HTG — Tecnología para tu negocio</title>
+  <meta name="description" content="Repuestos, accesorios y tecnología por mayor y por menor. Local a la calle en Pilar: armás el pedido en la web y lo cerrás en el local.">
+  <title>HTG — Repuestos y accesorios para celulares en Pilar</title>
+  <link rel="icon" href="htg-assets/htg-logo.svg">
+  <!-- AL PUBLICAR: og:image y og:url tienen que ser absolutos (https://dominio/...)
+       y hace falta <link rel="canonical">. Es lo único que falta el dominio. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HTG">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="HTG — Repuestos y accesorios para celulares en Pilar">
+  <meta property="og:description" content="Repuestos, accesorios y tecnología por mayor y por menor. Local a la calle en Pilar: armás el pedido en la web y lo cerrás en el local.">
+  <meta property="og:image" content="htg-assets/og-htg.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Local de HTG en Pilar: mostrador y góndolas de repuestos y accesorios para celulares.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTG — Repuestos y accesorios para celulares en Pilar">
+  <meta name="twitter:description" content="Repuestos, accesorios y tecnología por mayor y por menor. Local a la calle en Pilar: armás el pedido en la web y lo cerrás en el local.">
+  <meta name="twitter:image" content="htg-assets/og-htg.jpg">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="apple-touch-icon" href="htg-assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html"><img src="htg-assets/htg-logo.svg" alt="HTG"></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span></button>
-    <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a class="active" href="index.html" aria-current="page">Home</a><a href="tienda.html">Tienda</a><a href="mayoristas.html">Mayorista</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
-    <div class="header-tools">
-      <form class="mini-search" role="search" action="tienda.html"><input aria-label="Buscar" name="q" placeholder="Buscar productos, marcas, modelos o categorías..."><button type="submit" aria-label="Buscar"><i class="ico ico-search"></i></button></form>
-      <button aria-label="Mi cuenta" class="icon-btn account"><i class="ico ico-user"></i></button><button aria-label="Carrito, 0 productos" class="icon-btn cart"><i class="ico ico-cart"></i><b>0</b></button>
+<!--
+  THESIS: la home entra por la pieza, no por el titular: un teléfono abierto en
+  despiece donde cada capa es su rubro. Rechaza el hero de foto con titular
+  encima y cuatro tarjetas debajo, que es lo que shipea todo el rubro.
+  OWN-WORLD: negro #050505 y crema #f5f4f1, naranja #ff5a00 reservado al estado
+  activo. Barlow Condensed en versalitas sobre Inter. Dibujo técnico de trazo
+  1.3: guías horizontales, fantasmas punteados, rótulos alineados a un riel.
+  STORY: esto vende repuestos de celular, tiene profundidad real por rubro, y se
+  retira en Pilar.
+  FIRST VIEWPORT: copy a la izquierda, H1 a dos líneas y dos acciones; a la
+  derecha el despiece de seis capas en cascada hacia abajo-izquierda, cada una
+  con su guía al rótulo y su conteo real de catálogo. La barra de confianza
+  cierra el viewport con las condiciones pegadas a cada promesa.
+  FORM: el despiece, índice 6 de la lista ordenada, seed 97b44312.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+  <div class="topbar">
+    <div class="wrap topbar-in">
+      <p class="topbar-item">Retiro en el local de Pilar</p>
+      <p class="topbar-item">Envíos a todo el país desde $200.000</p>
+      <p class="topbar-item">Distribuidor oficial Soul</p>
     </div>
+  </div>
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="htg-assets/htg-logo.svg" alt="HTG" width="640" height="640" loading="eager" decoding="async"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="index.html" class="active" aria-current="page">Home</a><a href="tienda.html">Tienda</a><a href="mayoristas.html">Mayorista</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+    <div class="header-tools"><a class="tool" href="mayoristas.html"><i class="ico ico-user"></i><span>Cuenta</span></a><a class="tool tool--order" href="tienda.html"><i class="ico ico-box"></i><span>Pedido</span><b class="tool-count">0</b></a></div>
   </header>
 
   <main id="inicio">
     <section class="hero">
       <div class="hero-media">
-      <img class="hero-photo" src="htg-assets/minorista-exterior.webp" alt="Fachada del local HTG con cartelería de JBL y SOUL al atardecer">
+      <img class="hero-photo" src="htg-assets/minorista-exterior.webp" alt="Fachada del local HTG con cartelería de JBL y SOUL al atardecer" width="1500" height="1870" loading="eager" fetchpriority="high" decoding="async">
       <div class="hero-shade"></div>
       <div class="hero-content wrap">
-        <p class="eyebrow">Mayorista de tecnología</p>
-        <h1>Abastecemos<br>tu negocio<br>todos los días</h1>
-        <p>Todo lo que tu negocio necesita, en un solo lugar. <br>Más de 10.000 productos y un servicio confiable <br>para cada día y etapa de tu crecimiento.</p>
+        <h1>Repuestos y accesorios<br>para celulares</h1>
+        <p>Por mayor y por menor, en Pilar. <br>Armás el pedido en la web y lo cerrás en el local.</p>
         <div class="actions"><a class="btn primary" href="tienda.html">Explorar catálogo <span>→</span></a><a class="btn dark" href="mayoristas.html">Ver precios HTG</a></div>
       </div>
       </div>
-      <div class="hero-benefits wrap"><span><i class="ico ico-box"></i><b>+10.000 productos</b></span><span><i class="ico ico-truck"></i><b>Envíos a todo el país</b></span><span><i class="ico ico-users"></i><b>Atención mayorista</b></span><span><i class="ico ico-invoice"></i><b>Facturación mayorista</b></span></div>
+      <div class="hero-benefits wrap"><span><b>Envíos a todo el país</b></span><span><b>Atención mayorista</b></span><span><b>Facturación mayorista</b></span></div>
     </section>
 
     <section id="categorias" class="section wrap categories">
@@ -38,7 +75,7 @@
       <ul class="catmux">
         <li class="catmux__item">
           <a class="catmux__card" href="tienda.html">
-            <img class="catmux__photo" src="htg-assets/modulo.webp" alt="Módulo de repuesto para celular">
+            <img class="catmux__photo" src="htg-assets/modulo.webp" alt="Módulo de repuesto para celular" width="516" height="590" loading="eager" decoding="async">
             <span class="catmux__veil"></span>
             <span class="catmux__foot">
               <b class="catmux__title">Repuestos</b>
@@ -48,7 +85,7 @@
         </li>
         <li class="catmux__item">
           <a class="catmux__card" href="tienda.html">
-            <img class="catmux__photo" src="htg-assets/12477.webp" alt="Auriculares vincha SOUL">
+            <img class="catmux__photo" src="htg-assets/12477.webp" alt="Auriculares vincha SOUL" width="878" height="878" loading="eager" decoding="async">
             <span class="catmux__veil"></span>
             <span class="catmux__foot">
               <b class="catmux__title">Accesorios</b>
@@ -58,7 +95,7 @@
         </li>
         <li class="catmux__item">
           <a class="catmux__card" href="tienda.html">
-            <img class="catmux__photo" src="htg-assets/12790.webp" alt="Smartwatch SOUL EVO">
+            <img class="catmux__photo" src="htg-assets/12790.webp" alt="Smartwatch SOUL EVO" width="1104" height="1104" loading="eager" decoding="async">
             <span class="catmux__veil"></span>
             <span class="catmux__foot">
               <b class="catmux__title">Relojes</b>
@@ -68,7 +105,7 @@
         </li>
         <li class="catmux__item">
           <a class="catmux__card" href="tienda.html">
-            <img class="catmux__photo" src="htg-assets/15716.webp" alt="Power Bank SOUL PRO100">
+            <img class="catmux__photo" src="htg-assets/15716.webp" alt="Power Bank SOUL PRO100" width="744" height="744" loading="eager" decoding="async">
             <span class="catmux__veil"></span>
             <span class="catmux__foot">
               <b class="catmux__title">Energía</b>
@@ -78,7 +115,7 @@
         </li>
         <li class="catmux__item">
           <a class="catmux__card" href="tienda.html">
-            <img class="catmux__photo" src="htg-assets/14958.webp" alt="Parlante portátil SOUL con luces RGB">
+            <img class="catmux__photo" src="htg-assets/14958.webp" alt="Parlante portátil SOUL con luces RGB" width="516" height="516" loading="eager" decoding="async">
             <span class="catmux__veil"></span>
             <span class="catmux__foot">
               <b class="catmux__title">Parlantes</b>
@@ -88,8 +125,8 @@
         </li>
         <li class="catmux__item catmux__item--soul">
           <a class="catmux__card" href="soul.html">
-            <img class="catmux__soulmark" src="htg-assets/logo_soul.svg" alt="SOUL">
-            <img class="catmux__soulprod" src="htg-assets/12115.webp" alt="Smartwatch SOUL EVO 400">
+            <img class="catmux__soulmark" src="htg-assets/logo_soul.svg" alt="SOUL" width="247" height="47" loading="eager" decoding="async">
+            <img class="catmux__soulprod" src="htg-assets/12115.webp" alt="Smartwatch SOUL EVO 400" width="684" height="777" loading="lazy" decoding="async">
             <span class="catmux__foot">
               <b class="catmux__title">Tecnología que se adapta a vos</b>
               <span class="catmux__reveal"><span class="catmux__desc">Audio, carga, relojes y accesorios de la línea propia.</span><span class="catmux__cta">Conocé SOUL <i class="catmux__arrow">→</i></span></span>
@@ -111,64 +148,64 @@
         </ul>
         <a class="btn primary" href="mayoristas.html">Conocé más sobre HTG <span>&#8594;</span></a>
       </div>
-      <div class="wholesale-photo"><img src="htg-assets/heroxmayor.webp" alt="Depósito de HTG con mercadería en pallets y estanterías"><span class="wholesale-fade"></span></div>
+      <div class="wholesale-photo"><img src="htg-assets/heroxmayor.webp" alt="Depósito de HTG con mercadería en pallets y estanterías" width="1578" height="888" loading="lazy" decoding="async"><span class="wholesale-fade"></span></div>
     </section>
 
     <section id="productos" class="section wrap products">
       <div class="section-head"><h2>Productos destacados</h2><div><a href="tienda.html">Ver todos</a><button class="slide prev" aria-label="Anterior">‹</button><button class="slide next" aria-label="Siguiente">›</button></div></div>
       <div class="product-track">
         <article>
-          <img src="htg-assets/13781.webp" alt="Cable SOUL Magnético USB-C a USB-C 60W">
+          <img src="htg-assets/13781.webp" alt="Cable SOUL Magnético USB-C a USB-C 60W" width="716" height="716" loading="lazy" decoding="async">
           <small>Cables</small>
           <h3>Cable SOUL Magnético USB-C a USB-C 60W</h3>
           <div class="prod-buy">
             <div><strong>$7.341,71</strong><p>En stock</p></div>
-            <button type="button" aria-label="Agregar cable al carrito"><i class="ico ico-cart"></i></button>
+            <button type="button" aria-label="Agregar cable al pedido"><i class="ico ico-cart"></i></button>
           </div>
         </article>
         <article>
-          <img src="htg-assets/16739.webp" alt="Funda SOUL Premium MagSafe iPhone 15 Pro Max">
+          <img src="htg-assets/16739.webp" alt="Funda SOUL Premium MagSafe iPhone 15 Pro Max" width="684" height="543" loading="lazy" decoding="async">
           <small>Fundas</small>
           <h3>Funda SOUL Premium MagSafe iPhone 15 Pro Max</h3>
           <div class="prod-buy">
             <div><strong>$9.237,38</strong><p>En stock</p></div>
-            <button type="button" aria-label="Agregar funda al carrito"><i class="ico ico-cart"></i></button>
+            <button type="button" aria-label="Agregar funda al pedido"><i class="ico ico-cart"></i></button>
           </div>
         </article>
         <article>
-          <img src="htg-assets/12470.webp" alt="Cargador viajero SOUL Fast PD 65W GaN">
+          <img src="htg-assets/12470.webp" alt="Cargador viajero SOUL Fast PD 65W GaN" width="684" height="684" loading="lazy" decoding="async">
           <small>Cargadores</small>
           <h3>Cargador viajero SOUL Fast PD 65W GaN</h3>
           <div class="prod-buy">
             <div><strong>$20.209,77</strong><p>En stock</p></div>
-            <button type="button" aria-label="Agregar cargador al carrito"><i class="ico ico-cart"></i></button>
+            <button type="button" aria-label="Agregar cargador al pedido"><i class="ico ico-cart"></i></button>
           </div>
         </article>
         <article>
-          <img src="htg-assets/15716.webp" alt="Power Bank SOUL PRO100 10.000mAh 22.5W">
+          <img src="htg-assets/15716.webp" alt="Power Bank SOUL PRO100 10.000mAh 22.5W" width="744" height="744" loading="lazy" decoding="async">
           <small>Power bank</small>
           <h3>Power Bank SOUL PRO100 10.000mAh 22.5W</h3>
           <div class="prod-buy">
             <div><strong>$23.872,59</strong><p>En stock</p></div>
-            <button type="button" aria-label="Agregar power bank al carrito"><i class="ico ico-cart"></i></button>
+            <button type="button" aria-label="Agregar power bank al pedido"><i class="ico ico-cart"></i></button>
           </div>
         </article>
         <article>
-          <img src="htg-assets/12115.webp" alt="Smartwatch SOUL EVO 400 Negro">
+          <img src="htg-assets/12115.webp" alt="Smartwatch SOUL EVO 400 Negro" width="684" height="777" loading="lazy" decoding="async">
           <small>Smartwatch</small>
           <h3>Smartwatch SOUL EVO 400 Negro</h3>
           <div class="prod-buy">
             <div><strong>$25.157,79</strong><p>En stock</p></div>
-            <button type="button" aria-label="Agregar smartwatch al carrito"><i class="ico ico-cart"></i></button>
+            <button type="button" aria-label="Agregar smartwatch al pedido"><i class="ico ico-cart"></i></button>
           </div>
         </article>
         <article>
-          <img src="htg-assets/12477.webp" alt="Auricular BT SOUL BT800 ANC Vincha Negro">
+          <img src="htg-assets/12477.webp" alt="Auricular BT SOUL BT800 ANC Vincha Negro" width="878" height="878" loading="lazy" decoding="async">
           <small>Audio</small>
           <h3>Auricular BT SOUL BT800 ANC Vincha Negro</h3>
           <div class="prod-buy">
             <div><strong>$37.945,53</strong><p>En stock</p></div>
-            <button type="button" aria-label="Agregar auricular al carrito"><i class="ico ico-cart"></i></button>
+            <button type="button" aria-label="Agregar auricular al pedido"><i class="ico ico-cart"></i></button>
           </div>
         </article>
       </div>
@@ -179,26 +216,26 @@
       <div class="marquee">
         <div class="marquee-track">
           <ul class="marquee-set">
-          <li><img src="htg-assets/marcas/apple.svg" alt="Apple" style="--h:32px"></li>
-          <li><img src="htg-assets/marcas/jbl.svg" alt="JBL" style="--h:31px"></li>
-          <li><img src="htg-assets/marcas/kingstone.svg" alt="Kingston" style="--h:26px"></li>
-          <li><img src="htg-assets/marcas/maxell.svg" alt="Maxell" style="--h:25px"></li>
-          <li><img src="htg-assets/marcas/motorola.svg" alt="Motorola" style="--h:26px"></li>
-          <li><img src="htg-assets/marcas/samsung.svg" alt="Samsung" style="--h:21px"></li>
-          <li><img src="htg-assets/marcas/soul.svg" alt="SOUL" style="--h:26px"></li>
-          <li><img src="htg-assets/marcas/tplinl.svg" alt="TP-Link" style="--h:32px"></li>
-          <li><img src="htg-assets/marcas/xiaomi.svg" alt="Xiaomi" style="--h:29px"></li>
+          <li><img src="htg-assets/marcas/apple.svg" alt="Apple" style="--h:32px" width="751" height="256" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/jbl.svg" alt="JBL" style="--h:31px" width="604" height="402" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/kingstone.svg" alt="Kingston" style="--h:26px" width="548" height="109" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/maxell.svg" alt="Maxell" style="--h:25px" width="588" height="144" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/motorola.svg" alt="Motorola" style="--h:26px" width="823" height="188" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/samsung.svg" alt="Samsung" style="--h:21px" width="817" height="125" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/soul.svg" alt="SOUL" style="--h:26px" width="751" height="143" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/tplinl.svg" alt="TP-Link" style="--h:32px" width="750" height="282" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/xiaomi.svg" alt="Xiaomi" style="--h:29px" width="762" height="215" loading="eager" decoding="async"></li>
           </ul>
           <ul class="marquee-set" aria-hidden="true">
-          <li><img src="htg-assets/marcas/apple.svg" alt="" style="--h:32px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/jbl.svg" alt="" style="--h:31px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/kingstone.svg" alt="" style="--h:26px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/maxell.svg" alt="" style="--h:25px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/motorola.svg" alt="" style="--h:26px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/samsung.svg" alt="" style="--h:21px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/soul.svg" alt="" style="--h:26px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/tplinl.svg" alt="" style="--h:32px" aria-hidden="true"></li>
-          <li><img src="htg-assets/marcas/xiaomi.svg" alt="" style="--h:29px" aria-hidden="true"></li>
+          <li><img src="htg-assets/marcas/apple.svg" alt="" style="--h:32px" aria-hidden="true" width="751" height="256" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/jbl.svg" alt="" style="--h:31px" aria-hidden="true" width="604" height="402" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/kingstone.svg" alt="" style="--h:26px" aria-hidden="true" width="548" height="109" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/maxell.svg" alt="" style="--h:25px" aria-hidden="true" width="588" height="144" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/motorola.svg" alt="" style="--h:26px" aria-hidden="true" width="823" height="188" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/samsung.svg" alt="" style="--h:21px" aria-hidden="true" width="817" height="125" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/soul.svg" alt="" style="--h:26px" aria-hidden="true" width="751" height="143" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/tplinl.svg" alt="" style="--h:32px" aria-hidden="true" width="750" height="282" loading="eager" decoding="async"></li>
+          <li><img src="htg-assets/marcas/xiaomi.svg" alt="" style="--h:29px" aria-hidden="true" width="762" height="215" loading="eager" decoding="async"></li>
           </ul>
         </div>
       </div>
@@ -211,7 +248,7 @@
         <p>En HTG acompañamos tu negocio con soluciones en tecnología, conocimiento y un equipo que entiende tus necesidades.</p>
         <a class="btn primary" href="nosotros.html">Conocé más sobre HTG <span>&#8594;</span></a>
       </div>
-      <div class="about-photo"><img src="htg-assets/interiorlocal.webp" alt="Interior del local HTG con la pared de marcas y el mostrador de atención"><span class="about-fade"></span></div>
+      <div class="about-photo"><img src="htg-assets/interiorlocal.webp" alt="Interior del local HTG con la pared de marcas y el mostrador de atención" width="1672" height="941" loading="lazy" decoding="async"><span class="about-fade"></span></div>
     </section>
 
     </main>
@@ -219,21 +256,17 @@
   <footer>
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <img src="htg-assets/htg-logo.svg" alt="HTG">
-        <p>Mayorista de tecnología para tu negocio. Stock real, variedad y atención personalizada.</p>
-        <div class="footer-social">
-          <a href="https://instagram.com/htgpilar" target="_blank" rel="noopener" aria-label="Instagram de HTG"><i class="ico ico-ig"></i></a>
-          <a href="#" aria-label="Facebook de HTG"><i class="ico ico-fb"></i></a>
-          <a href="https://wa.me/5491164369119" target="_blank" rel="noopener" aria-label="WhatsApp de HTG"><i class="ico ico-wa"></i></a>
-        </div>
-      </div>
-      <nav><b>Productos</b><a href="tienda.html">Catálogo</a><a href="tienda.html">Novedades</a><a href="tienda.html">Ofertas</a><a href="soul.html">Marcas</a></nav>
-      <nav><b>Información</b><a href="#">Envíos y entregas</a><a href="#">Métodos de pago</a><a href="#">Términos y condiciones</a></nav>
-      <nav><b>Sobre HTG</b><a href="nosotros.html">Nosotros</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="contacto.html">Contacto</a><a href="nosotros.html">Sucursales</a></nav>
-      <nav><b>Cuenta</b><a href="#">Gestión de cuenta</a><a href="#">Mis pedidos</a><a href="#">Favoritos</a><a href="#">Cerrar sesión</a></nav>
-      <nav><b>Servicio mayorista</b><a href="mayoristas.html">Atención mayorista</a><a href="mayoristas.html">Venta corporativa</a><a href="mayoristas.html">Canal distribución</a><a href="#">Política de privacidad</a></nav>
+        <img src="htg-assets/htg-logo.svg" alt="HTG" width="120" height="120" loading="lazy" decoding="async">
+        <p>Repuestos y accesorios para celulares, por mayor y por menor. Local a la calle en Pilar.</p>
+            </div>
+      <nav><b>Comprar</b><a href="tienda.html">Tienda</a><a href="mayoristas.html">Cuenta mayorista</a><a href="servicio-tecnico.html">Servicio técnico</a></nav>
+      <nav><b>HTG</b><a href="nosotros.html">Nosotros</a><a href="soul.html">SOUL</a><a href="contacto.html">Contacto</a></nav>
+      <nav><b>El local</b><a href="https://www.google.com/maps/search/?api=1&amp;query=HTG+Celulares+Pilar+Colectora+Panamericana+769+La+Lonja" target="_blank" rel="noopener">Colectora Panamericana 769,<br>La Lonja, Buenos Aires</a><a href="https://wa.me/5491164369119" target="_blank" rel="noopener">+54 9 11 6436 9119</a></nav>
     </div>
-    <div class="wrap legal"><span>© 2026 HTG. Todos los derechos reservados.</span><span><a href="#">Términos y condiciones</a><a href="#">Política de privacidad</a></span></div>
+    <div class="wrap legal"><span>© 2026 HTG. Todos los derechos reservados.</span><div class="footer-social">
+          <a href="https://instagram.com/htgpilar" target="_blank" rel="noopener" aria-label="Instagram de HTG"><i class="ico ico-ig"></i></a>
+          <a href="https://wa.me/5491164369119" target="_blank" rel="noopener" aria-label="WhatsApp de HTG"><i class="ico ico-wa"></i></a>
+        </div></div>
   </footer>
   <script src="script.js"></script>
 </body>

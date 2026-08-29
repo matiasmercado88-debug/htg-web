@@ -3,21 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Servicio técnico HTG. Diagnóstico, reparación y atención clara para tu dispositivo.">
-  <title>Servicio técnico — HTG</title>
+  <meta name="description" content="Cambio de módulo, batería, pin de carga y tapa. El repuesto sale de nuestro propio depósito: diagnóstico y presupuesto antes de reparar.">
+  <title>Servicio técnico de celulares en Pilar — HTG</title>
+  <link rel="icon" href="htg-assets/htg-logo.svg">
+  <!-- AL PUBLICAR: og:image y og:url tienen que ser absolutos (https://dominio/...)
+       y hace falta <link rel="canonical">. Es lo único que falta el dominio. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HTG">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Servicio técnico de celulares en Pilar — HTG">
+  <meta property="og:description" content="Cambio de módulo, batería, pin de carga y tapa. El repuesto sale de nuestro propio depósito: diagnóstico y presupuesto antes de reparar.">
+  <meta property="og:image" content="htg-assets/og-htg.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Local de HTG en Pilar: mostrador y góndolas de repuestos y accesorios para celulares.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Servicio técnico de celulares en Pilar — HTG">
+  <meta name="twitter:description" content="Cambio de módulo, batería, pin de carga y tapa. El repuesto sale de nuestro propio depósito: diagnóstico y presupuesto antes de reparar.">
+  <meta name="twitter:image" content="htg-assets/og-htg.jpg">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="apple-touch-icon" href="htg-assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="topbar">
+    <div class="wrap topbar-in">
+      <p class="topbar-item">Retiro en el local de Pilar</p>
+      <p class="topbar-item">Envíos a todo el país desde $200.000</p>
+      <p class="topbar-item">Distribuidor oficial Soul</p>
+    </div>
+  </div>
   <header class="site-header">
-    <a class="logo" href="index.html"><img src="htg-assets/htg-logo.svg" alt="HTG"></a>
+    <a class="logo" href="index.html"><img src="htg-assets/htg-logo.svg" alt="HTG" width="640" height="640" loading="eager" decoding="async"></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span></button>
-    <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="index.html">Home</a><a href="tienda.html">Tienda</a><a href="mayoristas.html">Mayorista</a><a class="active" href="servicio-tecnico.html" aria-current="page">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
-    <div class="header-tools"><form class="mini-search" role="search" action="tienda.html"><input aria-label="Buscar" name="q" placeholder="Buscar productos, marcas, modelos o categorías..."><button type="submit" aria-label="Buscar"><i class="ico ico-search"></i></button></form><button aria-label="Mi cuenta" class="icon-btn account"><i class="ico ico-user"></i></button><button aria-label="Carrito, 0 productos" class="icon-btn cart"><i class="ico ico-cart"></i><b>0</b></button></div>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="index.html">Home</a><a href="tienda.html">Tienda</a><a href="mayoristas.html">Mayorista</a><a href="servicio-tecnico.html" class="active" aria-current="page">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+    <div class="header-tools"><a class="tool" href="mayoristas.html"><i class="ico ico-user"></i><span>Cuenta</span></a><a class="tool tool--order" href="tienda.html"><i class="ico ico-box"></i><span>Pedido</span><b class="tool-count">0</b></a></div>
   </header>
 
   <main class="service-page">
     <section class="st-hero">
-      <img src="htg-assets/hero-servtec.webp" alt="Técnico reparando un teléfono con pinza y destornillador de precisión">
+      <img src="htg-assets/hero-servtec.webp" alt="Técnico reparando un teléfono con pinza y destornillador de precisión" width="2400" height="1351" loading="eager" fetchpriority="high" decoding="async">
       <div class="st-hero-shade"></div>
       <div class="wrap st-hero-copy">
         <p class="eyebrow">Servicio técnico HTG</p>
@@ -49,24 +74,135 @@
       </div>
     </section>
 
-    <section class="st-scope">
-      <div class="wrap st-scope-grid">
-        <div class="st-scope-copy">
-          <p class="eyebrow">Conocimiento técnico</p>
-          <h2>Qué podemos revisar.</h2>
-          <ul class="st-list"><li><span>Pantallas y módulos</span></li><li><span>Carga y conectores</span></li><li><span>Batería</span></li><li><span>Audio</span></li><li><span>Cámaras</span></li><li><span>Diagnóstico general</span></li></ul>
-          <small>Trabajamos con repuestos de calidad y herramientas profesionales para cada reparación.</small>
+    <section class="dsp dsp--st">
+      <div class="wrap dsp-grid">
+        <div class="dsp-copy">
+          <h2>Qué le cambiamos<br>a tu equipo.</h2>
+          <p class="dsp-lede">El repuesto sale de nuestro propio depósito: el módulo que te ponemos es el mismo que le vendemos a los talleres. Por eso podemos ofrecerte más de una calidad para el mismo equipo y decirte qué cambia entre una y otra.</p>
+          <p class="dsp-note">También revisamos audio, cámaras y hacemos diagnóstico general.</p>
+          <p class="dsp-hint">Cada pieza abre su rubro en la tienda</p>
         </div>
-        <div class="st-scope-media">
-          <span class="st-slab"></span>
-          <img class="st-prod-a" src="htg-assets/glassprivacy.webp" alt="Vidrio templado para pantalla">
-          <img class="st-prod-b" src="htg-assets/modulo.webp" alt="Módulo de teléfono">
+        <div class="dsp-diagram">
+          <div class="dsp-stage">
+          <svg class="dsp-svg" viewBox="0 0 418 598" fill="none" aria-hidden="true" focusable="false">
+            <g class="p p--tapa" data-part="4">
+              <rect class="sh" x="56" y="330" width="130" height="250" rx="16"/>
+              <rect class="hair" x="61" y="335" width="120" height="240" rx="12"/>
+              <rect class="sh" x="65" y="342" width="48" height="48" rx="11"/>
+              <circle class="hair" cx="79" cy="356" r="7"/>
+              <circle class="hair" cx="99" cy="356" r="7"/>
+              <circle class="hair" cx="79" cy="376" r="7"/>
+              <circle class="hair" cx="99" cy="376" r="3.2"/>
+            </g>
+            <g class="p p--placa" data-part="3">
+              <rect class="ghost" x="102" y="252" width="130" height="250" rx="16"/>
+              <rect class="sh" x="112" y="442" width="96" height="46" rx="6"/>
+              <rect class="sh" x="146" y="479" width="28" height="9" rx="4.5"/>
+              <circle class="hair" cx="121" cy="452" r="3"/>
+              <circle class="hair" cx="199" cy="452" r="3"/>
+              <circle class="hair" cx="160" cy="453" r="2.4"/>
+              <line class="trace" x1="124" y1="462" x2="196" y2="462"/>
+              <line class="trace" x1="124" y1="468" x2="196" y2="468"/>
+              <line class="trace" x1="124" y1="474" x2="196" y2="474"/>
+            </g>
+            <g class="p p--bateria" data-part="2">
+              <rect class="ghost" x="148" y="174" width="130" height="250" rx="16"/>
+              <rect class="sh" x="157" y="212" width="104" height="176" rx="8"/>
+              <line class="hair" x1="157" y1="256" x2="261" y2="256"/>
+              <line class="hair" x1="157" y1="300" x2="261" y2="300"/>
+              <line class="hair" x1="157" y1="344" x2="261" y2="344"/>
+              <path class="hair" d="M261 240 h14"/>
+              <rect class="sh" x="275" y="233" width="20" height="14" rx="2"/>
+              <line class="hair" x1="279" y1="236" x2="279" y2="244"/>
+              <line class="hair" x1="283" y1="236" x2="283" y2="244"/>
+              <line class="hair" x1="287" y1="236" x2="287" y2="244"/>
+              <line class="hair" x1="291" y1="236" x2="291" y2="244"/>
+            </g>
+            <g class="p p--modulo" data-part="1">
+              <rect class="sh" x="194" y="96" width="130" height="250" rx="16"/>
+              <rect class="screen" x="199" y="101" width="120" height="240" rx="12"/>
+              <circle class="hair" cx="259" cy="114" r="4"/>
+              <path class="hair" d="M246 346 h26 v20 h-26"/>
+              <rect class="sh" x="244" y="366" width="30" height="11" rx="2"/>
+              <line class="hair" x1="250" y1="369" x2="250" y2="374"/>
+              <line class="hair" x1="256" y1="369" x2="256" y2="374"/>
+              <line class="hair" x1="262" y1="369" x2="262" y2="374"/>
+              <line class="hair" x1="268" y1="369" x2="268" y2="374"/>
+            </g>
+            <g class="p p--glass" data-part="0">
+              <rect class="sh" x="240" y="18" width="130" height="250" rx="16"/>
+              <rect class="hair" x="246" y="24" width="118" height="238" rx="11"/>
+              <rect class="hair" x="288" y="34" width="34" height="4" rx="2"/>
+              <circle class="hair" cx="342" cy="42" r="4.5"/>
+              <path class="gleam" d="M254 114 L302 48 M270 126 L318 60"/>
+            </g>
+            <g class="dsp-leads">
+              <g class="ld" data-lead="0">
+                <line x1="374" y1="143" x2="418" y2="143"/>
+                <circle cx="374" cy="143" r="3.2"/>
+              </g>
+              <g class="ld" data-lead="1">
+                <line x1="328" y1="221" x2="418" y2="221"/>
+                <circle cx="328" cy="221" r="3.2"/>
+              </g>
+              <g class="ld" data-lead="2">
+                <line x1="282" y1="299" x2="418" y2="299"/>
+                <circle cx="282" cy="299" r="3.2"/>
+              </g>
+              <g class="ld" data-lead="3">
+                <line x1="236" y1="377" x2="418" y2="377"/>
+                <circle cx="236" cy="377" r="3.2"/>
+              </g>
+              <g class="ld" data-lead="4">
+                <line x1="190" y1="455" x2="418" y2="455"/>
+                <circle cx="190" cy="455" r="3.2"/>
+              </g>
+            </g>
+          </svg>
+          </div>
+          <ul class="dsp-index">
+          <li class="dsp-row" style="--y:23.913%">
+            <a class="dsp-cell" href="tienda.html?cat=glass-protectores" data-part="0">
+              <span class="dsp-lead"></span>
+              <span class="dsp-name">Vidrio templado</span>
+              <span class="dsp-meta">Templado · Privacy · En el momento</span>
+            </a>
+          </li>
+          <li class="dsp-row" style="--y:36.957%">
+            <a class="dsp-cell" href="tienda.html?cat=modulos" data-part="1">
+              <span class="dsp-lead"></span>
+              <span class="dsp-name">Pantalla y módulo</span>
+              <span class="dsp-meta">Original · OEM · INCELL · Soft OLED</span>
+            </a>
+          </li>
+          <li class="dsp-row" style="--y:50.000%">
+            <a class="dsp-cell" href="tienda.html?cat=baterias" data-part="2">
+              <span class="dsp-lead"></span>
+              <span class="dsp-name">Batería</span>
+              <span class="dsp-meta">Con la capacidad real declarada</span>
+            </a>
+          </li>
+          <li class="dsp-row" style="--y:63.043%">
+            <a class="dsp-cell" href="tienda.html?cat=placas-carga" data-part="3">
+              <span class="dsp-lead"></span>
+              <span class="dsp-name">Pin de carga</span>
+              <span class="dsp-meta">Conectores y flex</span>
+            </a>
+          </li>
+          <li class="dsp-row" style="--y:76.087%">
+            <a class="dsp-cell" href="tienda.html?cat=tapa-trasera" data-part="4">
+              <span class="dsp-lead"></span>
+              <span class="dsp-name">Tapa y cámara</span>
+              <span class="dsp-meta">Con y sin lente</span>
+            </a>
+          </li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="st-parts">
-      <div class="st-parts-photo"><img src="htg-assets/servtecimg.webp" alt="Interior de un teléfono con la placa a la vista"></div>
+      <div class="st-parts-photo"><img src="htg-assets/servtecimg.webp" alt="Interior de un teléfono con la placa a la vista" width="1440" height="810" loading="lazy" decoding="async"></div>
       <div class="st-parts-copy">
         <p class="eyebrow">Calidad técnica que se nota</p>
         <h2>El repuesto correcto<br>también importa.</h2>
@@ -76,7 +212,7 @@
     </section>
 
     <section class="st-local">
-      <img src="htg-assets/interiorlocal.webp" alt="Salón de HTG donde se recibe el equipo">
+      <img src="htg-assets/interiorlocal.webp" alt="Salón de HTG donde se recibe el equipo" width="1672" height="941" loading="lazy" decoding="async">
       <div class="wrap"><p>Servicio técnico HTG <i>·</i> atención en el local.</p></div>
     </section>
     <section class="st-cta">
@@ -99,21 +235,17 @@
   <footer>
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <img src="htg-assets/htg-logo.svg" alt="HTG">
-        <p>Mayorista de tecnología para tu negocio. Stock real, variedad y atención personalizada.</p>
-        <div class="footer-social">
-          <a href="https://instagram.com/htgpilar" target="_blank" rel="noopener" aria-label="Instagram de HTG"><i class="ico ico-ig"></i></a>
-          <a href="#" aria-label="Facebook de HTG"><i class="ico ico-fb"></i></a>
-          <a href="https://wa.me/5491164369119" target="_blank" rel="noopener" aria-label="WhatsApp de HTG"><i class="ico ico-wa"></i></a>
-        </div>
-      </div>
-      <nav><b>Productos</b><a href="tienda.html">Catálogo</a><a href="tienda.html">Novedades</a><a href="tienda.html">Ofertas</a><a href="soul.html">Marcas</a></nav>
-      <nav><b>Información</b><a href="#">Envíos y entregas</a><a href="#">Métodos de pago</a><a href="#">Términos y condiciones</a></nav>
-      <nav><b>Sobre HTG</b><a href="nosotros.html">Nosotros</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="contacto.html">Contacto</a><a href="nosotros.html">Sucursales</a></nav>
-      <nav><b>Cuenta</b><a href="#">Gestión de cuenta</a><a href="#">Mis pedidos</a><a href="#">Favoritos</a><a href="#">Cerrar sesión</a></nav>
-      <nav><b>Servicio mayorista</b><a href="mayoristas.html">Atención mayorista</a><a href="mayoristas.html">Venta corporativa</a><a href="mayoristas.html">Canal distribución</a><a href="#">Política de privacidad</a></nav>
+        <img src="htg-assets/htg-logo.svg" alt="HTG" width="120" height="120" loading="lazy" decoding="async">
+        <p>Repuestos y accesorios para celulares, por mayor y por menor. Local a la calle en Pilar.</p>
+            </div>
+      <nav><b>Comprar</b><a href="tienda.html">Tienda</a><a href="mayoristas.html">Cuenta mayorista</a><a href="servicio-tecnico.html">Servicio técnico</a></nav>
+      <nav><b>HTG</b><a href="nosotros.html">Nosotros</a><a href="soul.html">SOUL</a><a href="contacto.html">Contacto</a></nav>
+      <nav><b>El local</b><a href="https://www.google.com/maps/search/?api=1&amp;query=HTG+Celulares+Pilar+Colectora+Panamericana+769+La+Lonja" target="_blank" rel="noopener">Colectora Panamericana 769,<br>La Lonja, Buenos Aires</a><a href="https://wa.me/5491164369119" target="_blank" rel="noopener">+54 9 11 6436 9119</a></nav>
     </div>
-    <div class="wrap legal"><span>© 2026 HTG. Todos los derechos reservados.</span><span><a href="#">Términos y condiciones</a><a href="#">Política de privacidad</a></span></div>
+    <div class="wrap legal"><span>© 2026 HTG. Todos los derechos reservados.</span><div class="footer-social">
+          <a href="https://instagram.com/htgpilar" target="_blank" rel="noopener" aria-label="Instagram de HTG"><i class="ico ico-ig"></i></a>
+          <a href="https://wa.me/5491164369119" target="_blank" rel="noopener" aria-label="WhatsApp de HTG"><i class="ico ico-wa"></i></a>
+        </div></div>
   </footer>
   <script src="script.js"></script>
 </body>

@@ -3,24 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Comprá tecnología por mayor en HTG. Stock real, variedad y atención personalizada para tu negocio.">
-  <title>Mayoristas — HTG</title>
+  <meta name="description" content="Precio por bulto con cuenta habilitada por CUIT, facturación y envíos a todo el país desde $200.000. Atención directa para tu negocio.">
+  <title>Cuenta mayorista — HTG Pilar</title>
+  <link rel="icon" href="htg-assets/htg-logo.svg">
+  <!-- AL PUBLICAR: og:image y og:url tienen que ser absolutos (https://dominio/...)
+       y hace falta <link rel="canonical">. Es lo único que falta el dominio. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HTG">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Cuenta mayorista — HTG Pilar">
+  <meta property="og:description" content="Precio por bulto con cuenta habilitada por CUIT, facturación y envíos a todo el país desde $200.000. Atención directa para tu negocio.">
+  <meta property="og:image" content="htg-assets/og-htg.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Local de HTG en Pilar: mostrador y góndolas de repuestos y accesorios para celulares.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cuenta mayorista — HTG Pilar">
+  <meta name="twitter:description" content="Precio por bulto con cuenta habilitada por CUIT, facturación y envíos a todo el país desde $200.000. Atención directa para tu negocio.">
+  <meta name="twitter:image" content="htg-assets/og-htg.jpg">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="apple-touch-icon" href="htg-assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html"><img src="htg-assets/htg-logo.svg" alt="HTG"></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span></button>
-    <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="index.html">Home</a><a href="tienda.html">Tienda</a><a class="active" href="mayoristas.html" aria-current="page">Mayorista</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
-    <div class="header-tools">
-      <form class="mini-search" role="search" action="tienda.html"><input aria-label="Buscar" name="q" placeholder="Buscar productos, marcas, modelos o categorías..."><button type="submit" aria-label="Buscar"><i class="ico ico-search"></i></button></form>
-      <button aria-label="Mi cuenta" class="icon-btn account"><i class="ico ico-user"></i></button><button aria-label="Carrito, 0 productos" class="icon-btn cart"><i class="ico ico-cart"></i><b>0</b></button>
+  <div class="topbar">
+    <div class="wrap topbar-in">
+      <p class="topbar-item">Retiro en el local de Pilar</p>
+      <p class="topbar-item">Envíos a todo el país desde $200.000</p>
+      <p class="topbar-item">Distribuidor oficial Soul</p>
     </div>
+  </div>
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="htg-assets/htg-logo.svg" alt="HTG" width="640" height="640" loading="eager" decoding="async"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal"><a href="index.html">Home</a><a href="tienda.html">Tienda</a><a href="mayoristas.html" class="active" aria-current="page">Mayorista</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav>
+    <div class="header-tools"><a class="tool" href="mayoristas.html"><i class="ico ico-user"></i><span>Cuenta</span></a><a class="tool tool--order" href="tienda.html"><i class="ico ico-box"></i><span>Pedido</span><b class="tool-count">0</b></a></div>
   </header>
 
   <main class="wholesale-page">
     <section class="wholesale-hero">
-      <img src="htg-assets/localnuevo.webp" alt="Salón de HTG con el mostrador y la pared de accesorios">
+      <img src="htg-assets/localnuevo.webp" alt="Salón de HTG con el mostrador y la pared de accesorios" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async">
       <div class="wholesale-hero-shade"></div>
       <div class="wrap wholesale-hero-content">
         <p class="eyebrow">Mayoristas HTG</p>
@@ -32,10 +54,10 @@
 
     <section class="proof-bar">
       <div class="hero-benefits wrap divided">
-        <span><i class="ico ico-box"></i><b>+10.000 productos</b></span>
-        <span><i class="ico ico-tag"></i><b>Precios mayoristas</b></span>
-        <span><i class="ico ico-truck"></i><b>Envíos a todo el país</b></span>
-        <span><i class="ico ico-users"></i><b>Atención directa</b></span>
+        
+        <span><b>Precios mayoristas</b></span>
+        <span><b>Envíos a todo el país</b></span>
+        <span><b>Atención directa</b></span>
       </div>
     </section>
 
@@ -45,7 +67,7 @@
         <i class="intro-rule"></i>
         <p>Por eso contamos con variedad, disponibilidad y asesoramiento en un solo lugar. Elegí lo que necesitás, armá tu pedido y recibí atención directa durante todo el proceso.</p>
       </div>
-      <div class="intro-photo"><img src="htg-assets/minorista-interior2.webp" alt="Estanterías con accesorios en caja en el local de HTG"></div>
+      <div class="intro-photo"><img src="htg-assets/minorista-interior2.webp" alt="Estanterías con accesorios en caja en el local de HTG" width="1430" height="1907" loading="lazy" decoding="async"></div>
     </section>
 
     <section class="wholesale-categories">
@@ -54,23 +76,23 @@
         <div class="wholesale-category-grid">
           <a href="tienda.html" class="wc-card">
             <div class="wc-txt"><h3>Contenido</h3><p>Micrófonos inalámbricos<br>para creadores.</p></div>
-            <img src="htg-assets/mic1.webp" alt="Micrófono inalámbrico">
+            <img src="htg-assets/mic1.webp" alt="Micrófono inalámbrico" width="784" height="784" loading="lazy" decoding="async">
           </a>
           <a href="tienda.html" class="wc-card">
             <div class="wc-txt"><h3>Protección</h3><p>Vidrios templados<br>para cada dispositivo.</p></div>
-            <img src="htg-assets/glassprivacy.webp" alt="Vidrio templado privacy">
+            <img src="htg-assets/glassprivacy.webp" alt="Vidrio templado privacy" width="784" height="784" loading="lazy" decoding="async">
           </a>
           <a href="tienda.html" class="wc-card wc-tall">
             <div class="wc-txt"><h3>Carga</h3><p>Soluciones inteligentes<br>para cargar más y mejor.</p></div>
-            <img src="htg-assets/powerbank.webp" alt="Estación de carga multipuerto">
+            <img src="htg-assets/powerbank.webp" alt="Estación de carga multipuerto" width="732" height="732" loading="lazy" decoding="async">
           </a>
           <a href="tienda.html" class="wc-card wc-wide">
             <div class="wc-txt"><h3>Auto</h3><p>Accesorios que hacen<br>cada viaje más práctico.</p></div>
-            <img src="htg-assets/cargadorauto.webp" alt="Cargador de auto SOUL con cables">
+            <img src="htg-assets/cargadorauto.webp" alt="Cargador de auto SOUL con cables" width="480" height="480" loading="lazy" decoding="async">
           </a>
           <a href="tienda.html" class="wc-card wc-wide">
             <div class="wc-txt"><h3>Conectividad</h3><p>Adaptadores y hubs<br>que te conectan a todo.</p></div>
-            <img src="htg-assets/multiusb.webp" alt="Hub USB-C multipuerto">
+            <img src="htg-assets/multiusb.webp" alt="Hub USB-C multipuerto" width="480" height="480" loading="lazy" decoding="async">
           </a>
         </div>
         <a class="wc-all" href="tienda.html">Ver todos los productos <span>&#8594;</span></a>
@@ -89,32 +111,28 @@
           <li><i class="ico ico-truck"></i><b>4. Lo recibís</b><p>Coordinamos entrega o envío y te acompañamos después de la compra.</p></li>
         </ol>
       </div>
-      <div class="process-photo"><img src="htg-assets/heroxmayor.webp" alt="Depósito de HTG con mercadería en pallets y estanterías"></div>
+      <div class="process-photo"><img src="htg-assets/heroxmayor.webp" alt="Depósito de HTG con mercadería en pallets y estanterías" width="1578" height="888" loading="lazy" decoding="async"></div>
     </section>
 
     <section class="wholesale-triptico">
-      <div class="wrap"><img src="htg-assets/localtriptico.webp" alt="Tres vistas del local de HTG: taller, mostrador de periféricos y salón de accesorios"></div>
+      <div class="wrap"><img src="htg-assets/localtriptico.webp" alt="Tres vistas del local de HTG: taller, mostrador de periféricos y salón de accesorios" width="1792" height="592" loading="lazy" decoding="async"></div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <img src="htg-assets/htg-logo.svg" alt="HTG">
-        <p>Mayorista de tecnología para tu negocio. Stock real, variedad y atención personalizada.</p>
-        <div class="footer-social">
-          <a href="https://instagram.com/htgpilar" target="_blank" rel="noopener" aria-label="Instagram de HTG"><i class="ico ico-ig"></i></a>
-          <a href="#" aria-label="Facebook de HTG"><i class="ico ico-fb"></i></a>
-          <a href="https://wa.me/5491164369119" target="_blank" rel="noopener" aria-label="WhatsApp de HTG"><i class="ico ico-wa"></i></a>
-        </div>
-      </div>
-      <nav><b>Productos</b><a href="tienda.html">Catálogo</a><a href="tienda.html">Novedades</a><a href="tienda.html">Ofertas</a><a href="soul.html">Marcas</a></nav>
-      <nav><b>Información</b><a href="#">Envíos y entregas</a><a href="#">Métodos de pago</a><a href="#">Términos y condiciones</a></nav>
-      <nav><b>Sobre HTG</b><a href="nosotros.html">Nosotros</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="contacto.html">Contacto</a><a href="nosotros.html">Sucursales</a></nav>
-      <nav><b>Cuenta</b><a href="#">Gestión de cuenta</a><a href="#">Mis pedidos</a><a href="#">Favoritos</a><a href="#">Cerrar sesión</a></nav>
-      <nav><b>Servicio mayorista</b><a href="mayoristas.html">Atención mayorista</a><a href="mayoristas.html">Venta corporativa</a><a href="mayoristas.html">Canal distribución</a><a href="#">Política de privacidad</a></nav>
+        <img src="htg-assets/htg-logo.svg" alt="HTG" width="120" height="120" loading="lazy" decoding="async">
+        <p>Repuestos y accesorios para celulares, por mayor y por menor. Local a la calle en Pilar.</p>
+            </div>
+      <nav><b>Comprar</b><a href="tienda.html">Tienda</a><a href="mayoristas.html">Cuenta mayorista</a><a href="servicio-tecnico.html">Servicio técnico</a></nav>
+      <nav><b>HTG</b><a href="nosotros.html">Nosotros</a><a href="soul.html">SOUL</a><a href="contacto.html">Contacto</a></nav>
+      <nav><b>El local</b><a href="https://www.google.com/maps/search/?api=1&amp;query=HTG+Celulares+Pilar+Colectora+Panamericana+769+La+Lonja" target="_blank" rel="noopener">Colectora Panamericana 769,<br>La Lonja, Buenos Aires</a><a href="https://wa.me/5491164369119" target="_blank" rel="noopener">+54 9 11 6436 9119</a></nav>
     </div>
-    <div class="wrap legal"><span>© 2026 HTG. Todos los derechos reservados.</span><span><a href="#">Términos y condiciones</a><a href="#">Política de privacidad</a></span></div>
+    <div class="wrap legal"><span>© 2026 HTG. Todos los derechos reservados.</span><div class="footer-social">
+          <a href="https://instagram.com/htgpilar" target="_blank" rel="noopener" aria-label="Instagram de HTG"><i class="ico ico-ig"></i></a>
+          <a href="https://wa.me/5491164369119" target="_blank" rel="noopener" aria-label="WhatsApp de HTG"><i class="ico ico-wa"></i></a>
+        </div></div>
   </footer>
   <script src="script.js"></script>
 </body>
