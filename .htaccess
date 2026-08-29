@@ -1,0 +1,83 @@
+# =============================================================================
+#  HTG — configuración de Apache / LiteSpeed (BaeHost)
+# =============================================================================
+#  Todo esto lo hacía GitHub Pages solo. Un Apache compartido no hace ninguna:
+#  sin este archivo el 404.html no se usa nunca, el CSS viaja sin comprimir y
+#  el sitio contesta por http y por https como si fueran dos sitios distintos.
+#
+#  Cada bloque está envuelto en <IfModule>: si el hosting no tiene ese módulo,
+#  se ignora en vez de tirar un Error 500.
+# =============================================================================
+
+
+# --- Página de error propia --------------------------------------------------
+# OJO: la ruta es desde la raíz del dominio. Si el sitio no queda en public_html
+# sino en una subcarpeta, hay que escribir /lacarpeta/404.html
+ErrorDocument 404 /404.html
+
+
+# --- Todo por https ----------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirige al MISMO host, no a uno escrito a mano: así se puede probar el
+  # sitio por la URL temporal del hosting antes de que el DNS apunte acá.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ---------------------------------------------------------------------------
+  # DOMINIO CANÓNICO — descomentar RECIÉN cuando htg.com.ar ya apunte al server.
+  # Manda htgstore.com.ar, htg-store.com.ar y www a htg.com.ar, que es el
+  # dominio que llevan el <link rel="canonical"> y el sitemap.xml.
+  # Si se descomenta antes, la URL temporal de prueba deja de funcionar.
+  # ---------------------------------------------------------------------------
+  # RewriteCond %{HTTP_HOST} !^htg\.com\.ar$ [NC]
+  # RewriteRule ^ https://htg.com.ar%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+
+# --- Compresión --------------------------------------------------------------
+# styles.css pesa 110 KB sin comprimir y unos 20 comprimido. Es la diferencia
+# más grande que se puede hacer con una sola línea.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+
+# --- Caché -------------------------------------------------------------------
+# El sitio NO tiene versionado en los nombres de archivo, así que los plazos son
+# conservadores a propósito: si se cambia una imagen y se sube con el mismo
+# nombre, el que ya la vio la sigue viendo vieja hasta que venza.
+# Para forzar una actualización antes de tiempo: renombrar el archivo.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp              "access plus 30 days"
+  ExpiresByType image/jpeg              "access plus 30 days"
+  ExpiresByType image/png               "access plus 30 days"
+  ExpiresByType image/svg+xml           "access plus 30 days"
+  ExpiresByType font/woff2              "access plus 1 year"
+  ExpiresByType text/css                "access plus 1 day"
+  ExpiresByType application/javascript  "access plus 1 day"
+  ExpiresByType text/html               "access plus 0 seconds"
+</IfModule>
+
+
+# --- Tipos MIME que algunos hostings viejos no traen -------------------------
+<IfModule mod_mime.c>
+  AddType image/webp        .webp
+  AddType image/svg+xml     .svg
+  AddType application/xml   .xml
+</IfModule>
+
+
+# --- Higiene -----------------------------------------------------------------
+# Sin listado de directorios: htg.com.ar/htg-assets/ no tiene que mostrar el
+# índice de fotos.
+Options -Indexes
+
+# UTF-8 por defecto, por si el server manda otra cosa en los headers.
+AddDefaultCharset UTF-8
